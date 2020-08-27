@@ -1,0 +1,24 @@
+.wrapper
+  .header
+    .title
+      Sherror
+    .linkBox
+      .linkSerach
+        エラーを探す
+      %ul.linkContents
+        %li.linkContents__items
+        - unless user_signed_in?
+          %li.linkContents__items
+            = link_to '新規登録', new_user_registration_path
+          %li.kinkContents__items
+            = link_to 'ログイン', new_user_session_path
+        - else
+          %li.linkContents__items
+            = link_to 'マイページ', '#'
+          %li.linkContents__items
+            = link_to 'ログアウト', destroy_user_session_path, method: :delete
+          %li.linkContents__items
+            = link_to '投稿する', '#'
+  .main
+    あなたのエラーは誰かが経験しているかもしれません
+    会員登録画面
