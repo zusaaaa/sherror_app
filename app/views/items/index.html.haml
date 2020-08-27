@@ -2,18 +2,23 @@
   .header
     .title
       Sherror
+      = @user.username
     .linkBox
-      .link__post
-        投稿する
-      .link__serach
-        探す
-      .link__index
-        エラー一覧
-      .link__login
+      .linkSerach
+        エラーを探す
+      %ul.linkContents
         - unless user_signed_in?
-          = link_to 'ログイン', new_user_registration_path
+          %li.linkContents__items
+            = link_to '新規登録', new_user_registration_path
+          %li.kinkContents__items
+            = link_to 'ログイン', new_user_session_path
         - else
-          = link_to 'マイページ'
+          %li.linkContents__items
+            = link_to 'マイページ', '#'
+          %li.linkContents__items
+            = link_to 'ログアウト', destroy_user_session_path, method: :delete
+          %li.linkContents__items
+            = link_to '投稿する', '#'
   .main
     あなたのエラーは誰かが経験しているかもしれません
     会員登録画面
