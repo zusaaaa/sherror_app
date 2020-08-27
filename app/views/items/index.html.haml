@@ -1,0 +1,19 @@
+.wrapper
+  .header
+    .title
+      Sherror
+    .linkBox
+      .link__post
+        投稿する
+      .link__serach
+        探す
+      .link__index
+        エラー一覧
+      .link__login
+        - unless user_signed_in?
+          = link_to 'ログイン', new_user_registration_path
+        - else
+          = link_to 'マイページ'
+  .main
+    あなたのエラーは誰かが経験しているかもしれません
+    会員登録画面

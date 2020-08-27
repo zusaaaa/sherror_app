@@ -1,0 +1,26 @@
+%h2 ユーザー登録
+= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+  = render "devise/shared/error_messages", resource: resource
+  .field
+    = f.label :'ユーザー名'
+    %br/
+    = f.text_field :username, placeholder: 'Sherror_kun', autofocus: true, autocomplete: 'username', class: 'dorm-imput'
+
+  .field
+    = f.label :'メールアドレス'
+    %br/
+    = f.email_field :email, autofocus: true, autocomplete: "email", autofocus: true, class: 'dorm-imput'
+  .field
+    = f.label :'パスワード'
+    - if @minimum_password_length
+      %em
+        (#{@minimum_password_length} characters minimum)
+    %br/
+    = f.password_field :password, autocomplete: "new-password", autofocus: true, class: 'dorm-imput'
+  .field
+    = f.label :'パスワード(確認用)'
+    %br/
+    = f.password_field :password_confirmation, autocomplete: "new-password" , autofocus: true, class: 'dorm-imput'
+  .actions
+    = f.submit "Sign up"
+= render "devise/shared/links"
