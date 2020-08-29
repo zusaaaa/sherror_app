@@ -1,0 +1,8 @@
+
+
+.formBox
+  = form_with model: @post, class: 'formNew', local: true do |f|
+    .post
+      投稿する
+    = f.text_field :post_content, placeholder: "投稿内容", autofocus: true, class: 'formInput'
+    = button_to '投稿する', action: :create, class: 'btn'

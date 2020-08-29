@@ -1,3 +1,17 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.formBox {
+  width: 1000px;
+  height: 1000px;
+  .post {
+    width: 200px;
+    height: 90px;
+    background-color: lightsteelblue;
+  }
+  .formNew {
+    width: 500px;
+    height: 600px;
+    .formInput {
+      width: 500px;
+      height: 400px;
+    }
+  }
+}
