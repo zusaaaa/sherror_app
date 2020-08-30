@@ -1,4 +1,14 @@
-.contents
-  - @posts.each do |post|
-    = post.username
-    = post.post_content
+= render "items/header"
+
+.wrapper
+  .postBox
+    .userName
+      - @users.each do |user|
+        = user.username
+    .contents
+      - @posts.each do |post|
+        .contents__title
+          = post.post_title
+        .contents__btnBox
+          = link_to "詳細", "#"
+          = link_to "削除", "#"
