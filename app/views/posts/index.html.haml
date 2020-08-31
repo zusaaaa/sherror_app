@@ -10,5 +10,5 @@
         .contents__title
           = post.post_title
         .contents__btnBox
-          = link_to "詳細", "#"
+          = link_to "詳細", post_path(post[:id])
           = link_to "削除", "#"

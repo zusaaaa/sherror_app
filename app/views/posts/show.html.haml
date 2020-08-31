@@ -1,0 +1,10 @@
+= render "items/header"
+
+.wrapper
+  .posts
+    .posts__name
+      = "#{@user.username}のエラー"
+    .posts__title
+      = @post.post_title
+    .posts__contents
+      = @post.post_content
