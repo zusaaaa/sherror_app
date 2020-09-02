@@ -19,9 +19,14 @@ class PostsController < ApplicationController
     redirect_to action: :index
   end
 
+  def show
+    @post = Post.find(params[:id])
+    @user = User.find(@post.user_id)
+  end
+
   private
 
   def post_params
-    params.require(:post).permit(:post_title, :post_content, :image).merge(user_id: current_user.id)
+    params.require(:post).permit(:title, :code, :ideal, :cause, :solution, :image).merge(user_id: current_user.id)
   end
 end

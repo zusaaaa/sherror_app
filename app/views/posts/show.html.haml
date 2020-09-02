@@ -1,0 +1,20 @@
+= render "items/header"
+
+.wrapper
+  .posts
+    .posts__name
+      = "#{@user.username}さんのエラー"
+    .posts__title
+      = @post.title
+    .posts__code
+      エラーが起きていたコード
+      = markdown(@post.code).html_safe
+    .posts__ideal
+      理想(etc.実装しようとした機能、目指した状態など)
+      = markdown(@post.ideal).html_safe
+    .post__current_status
+      原因(今何が起きていたか)
+      = markdown(@post.cause).html_safe
+    .post__solution
+      どうしたら解決したか
+      = markdown(@post.solution).html_safe
