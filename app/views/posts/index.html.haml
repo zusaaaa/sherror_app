@@ -8,7 +8,7 @@
     .contents
       - @posts.each do |post|
         .contents__title
-          = post.post_title
+          = post.title
         .contents__btnBox
           = link_to "詳細", post_path(post[:id])
           = link_to "削除", "#"
