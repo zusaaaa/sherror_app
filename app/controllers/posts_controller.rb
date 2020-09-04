@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: [:edit, :show]
   def index
     @users = User.all
     @posts = Post.all
@@ -20,13 +21,24 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
     @user = User.find(@post.user_id)
+  end
+
+  def edit
+  end
+
+  def update
+    post = Post.find(params[:id])
+    post.update(post_params)
   end
 
   private
 
   def post_params
     params.require(:post).permit(:title, :code, :ideal, :cause, :solution, :image).merge(user_id: current_user.id)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 end
