@@ -3,6 +3,10 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title SherrorApp
+    %script{src: "http://code.jquery.com/jquery-3.3.1.min.js"}
+    %script{src: "https://cdn.jsdelivr.net/npm/marked/marked.min.js"}
+    %link{rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/kimbie.light.min.css"}
+    %script{src: "//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/highlight.min.js"}
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
