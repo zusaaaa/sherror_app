@@ -1,15 +1,19 @@
 .wrapper
   = form_with model: @post, class: 'formBox', local: true do |f|
     .formTitle
-    記事タイトル
+      記事タイトル
     = f.text_field :title, placeholder: "記事タイトル", class: 'formInput'
     .formContent
-    = f.label "エラーが起きたコード"
-    = f.text_area :code, placeholder: "font-size: 20px", class: 'formInput'
-    = f.label "理想(etc.実装しようとした機能、目指した状態など)"
-    = f.text_area :ideal, placeholder: "テキストフォントのサイズを大きくしたい", class: 'formInput'
-    = f.label "原因(今何が起きていたか)"
-    = f.text_area :cause, placeholder: "font-size: 25pxの後の ; 抜け", class: 'formInput'
-    = f.label "どうしたら解決したか"
-    = f.text_area :solution, placeholder: " ; を入れると無事解決した", class: 'formInput'
-    = button_to '投稿する', {controller: 'posts', action: :create}, class: 'btn'
+      .Content__title
+        = f.label "エラーが起きたコード"
+      = f.text_area :code, placeholder: "font-size: 20px", class: 'formInput'
+      .Content__title
+      = f.label "理想(etc.実装しようとした機能、目指した状態など)"
+      = f.text_area :ideal, placeholder: "テキストフォントのサイズを大きくしたい", class: 'formInput'
+      .Content__title
+        = f.label "原因(今何が起きていたか)"
+      = f.text_area :cause, placeholder: "font-size: 25pxの後の ; 抜け", class: 'formInput'
+      .Content__title
+        = f.label "どうしたら解決したか"
+      = f.text_area :solution, placeholder: " ; を入れると無事解決した", class: 'formInput'
+      = button_to '投稿する', {controller: 'posts', action: :create}, class: 'btn'
