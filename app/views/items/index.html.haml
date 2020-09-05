@@ -1,14 +1,14 @@
 =render 'items/header'
 
 .wrapper
-  .postBox
-    .userName
-      - @users.each do |user|
-        = user.username
+  = link_to post_path(@posts.ids), class: "postBox", method: :get do
     .contents
       - @posts.each do |post|
         .contents__title
           = post.title
         .contents__btnBox
-          = link_to "詳細", post_path(post.id)
-          = link_to "削除", post_path(post.id), method: :delete
+          = #link_to "削除", post_path(post.id), method: :delete
+    .userBox
+      - @users.each do |user|
+        .userItems
+          = user.username
