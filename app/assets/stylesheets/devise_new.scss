@@ -1,0 +1,32 @@
+.form {
+  margin: 0 300px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  background: #ffefd5;
+
+  &__title {
+    width: 300px;
+    font-size: 20px;
+    padding: 5px 50px 5px 50px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #f7e494;
+  }
+  .form-contents {
+    margin-top: 20px;
+    &__title {
+      font-size: 18px;
+    }
+  }
+
+  .form-input {
+    height: 40px;
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
