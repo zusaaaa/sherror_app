@@ -1,24 +1,30 @@
-# README
+# Name
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+エラー共有アプリ"Sherror"です
 
-Things you may want to cover:
+このアプリは多数のエンジニアが直面したエラー内容とその解決策を共有するためのアプリケーションです。
+作成のきっかけは、初学者の私が1時間かけても解決出来なかったエラーが、先輩等が10分で解決できた事象を見て、
+なんとかこの時間を短くすることが出来ないかと考え作成しているものです。
 
-* Ruby version
+対象は主に、私のような初学者を対象と考えており、入力フォームにそれぞれ、「エラー発生したコード」「エラーの原因」「エラー解決したコード」と、
+入力する内容を絞ることで無駄な情報を省き、生産性を高めることを意識して作成しております。
 
-* System dependencies
+# Features
 
-* Configuration
+文章を書くのが苦手な人向けに、記述する項目を箇条書きや一問一答のような形式で書けるように意識しております。
 
-* Database creation
+# Requirement
 
-* Database initialization
+ruby 2.5.1p57
+Ruby on Rails  5.2.4.3
 
-* How to run the test suite
+# Usage
 
-* Services (job queues, cache servers, search engines, etc.)
+現在作成途中です。
+基本的なCRUDを備えております。
 
-* Deployment instructions
+# Note
+・ タグ付機能
+・ 簡単ログイン機能
 
-* ...
+を予定しております。
